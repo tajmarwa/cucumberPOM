@@ -6,17 +6,13 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import static com.automation.utils.ConfigUtils.getPropertyByKey;
 import static com.automation.utils.ConfigUtils.loadProperties;
 
-/**
- * Author : Vaishali Thakkar
- * DriverUtils: Utility methods for invoking webdriver instance and performing operations on selenium webdriver
- * Available Utils : initDiver(), getDriver(), tearDown()
- */
+
 public class DriverUtils {
     static WebDriver driver;
 
     public static void initDriver() {
         loadProperties();
-        System.setProperty("webdriver.chrome.driver", "Drivers/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "Drivers/chromedriver");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get(getPropertyByKey("application.url"));

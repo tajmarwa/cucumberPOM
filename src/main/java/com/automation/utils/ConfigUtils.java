@@ -10,8 +10,8 @@ public class ConfigUtils {
 
     public static void loadProperties() {
         try {
-            prop.load(new FileInputStream(new File(System.getProperty("user.dir") + "\\src\\test\\resources\\config.properties")));
-            prop.load(new FileInputStream(new File(System.getProperty("user.dir") + "\\src\\test\\resources\\messages.properties")));
+            prop.load(new FileInputStream(new File(System.getProperty("user.dir") + "/src/test/resources/config.properties")));
+            prop.load(new FileInputStream(new File(System.getProperty("user.dir") + "/src/test/resources/messages.properties")));
             System.out.println(prop);
         } catch (IOException e) {
             e.printStackTrace();
