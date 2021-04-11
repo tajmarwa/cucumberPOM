@@ -54,7 +54,7 @@ public class HomePage {
     }
 
     public void verifyUserNameAfterLogin() {
-        assertEquals(userNameText, userNameText.getText(), getPropertyByKey("loggedin.user"));
+         assertEquals(userNameText, userNameText.getText(), getPropertyByKey("loggedin.user"));
     }
 
     public void verifyUserAfterRegistration(){
@@ -63,8 +63,7 @@ public class HomePage {
     }
 
     public void selectItemFromHOmePage(String itemName) {
-        clickOnElement(logoImage);
-        WebElement itemNameElement = createDynamicLocator("//*[contains(text(),'%s')]", itemName);
+        WebElement itemNameElement = createDynamicLocator("//div[@class='product-container']//a[contains(text(),'%s')]", itemName);
         clickOnElement(itemNameElement);
     }
 

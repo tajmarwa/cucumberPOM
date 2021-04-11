@@ -7,6 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 import static com.automation.utils.AssertionUtils.assertPresent;
 import static com.automation.utils.CommonUtils.clickOnElement;
 import static com.automation.utils.DriverUtils.getDriver;
+import static com.automation.utils.WebElementUtils.waitForVisible;
 
 public class ShippingPage {
     public ShippingPage(){
@@ -22,6 +23,7 @@ public class ShippingPage {
     private WebElement checkOutButton;
 
     public void verifyServiceTermsOnshippingPage(){
+        waitForVisible(serviceTerms);
         assertPresent(serviceTerms);
     }
 
