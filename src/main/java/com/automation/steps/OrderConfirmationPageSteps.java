@@ -11,6 +11,14 @@ public class OrderConfirmationPageSteps {
     public void verifyOrderConfirmationDetails() {
         orderConfirmationPage.getOrderReferenceNumber();
     }
+
+    @Then("^Verify placed order on Order History page$")
+    public void verifyOrderPlaced() {
+        orderConfirmationPage.verifyOrderPage();
+        orderConfirmationPage.verifyOrderPlaced();
+    }
+
+
 /*    @Then("^Verify order details on order confirmation page$")
     public void verify_order_details_on_order_confirmation_page(){
 

@@ -49,4 +49,9 @@ public class HomePageSteps {
         homepage.clicksMyPersonalInfo();
     }
 
+    @Then("^User go to order history page from homepage$")
+    public void verifyOrderConfirmationDetails() {
+        homepage.clickOnHeader();
+    }
+
 }

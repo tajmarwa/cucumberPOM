@@ -45,6 +45,12 @@ public class HomePage {
     @FindBy(xpath = "//span[contains(text(),'My personal information')]")
     private  WebElement myPersonalInfo;
 
+    @FindBy(className = "header_user_info")
+    private  WebElement userHeader;
+
+    @FindBy(xpath = "//span[contains(text(),'Order history and details')]")
+    private  WebElement orderHistory;
+
     public void verifyUserOnHomepage() {
         assertPageTitle(getPropertyByKey("homepage.title"));
     }
@@ -81,6 +87,11 @@ public class HomePage {
     public void clicksMyPersonalInfo(){
         waitForVisible(myPersonalInfo);
         clickOnElement(myPersonalInfo);
+    }
+
+    public void clickOnHeader(){
+        clickOnElement(userHeader);
+        clickOnElement(orderHistory);
     }
 
 }

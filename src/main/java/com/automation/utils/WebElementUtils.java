@@ -34,7 +34,7 @@ public class WebElementUtils {
         }
     }
 
-    public void waitForElementToBeClickable(WebElement element) {
+    public static void waitForElementToBeClickable(WebElement element) {
         try {
             wait.until(ExpectedConditions.elementToBeClickable(element));
         } catch (Exception e) {
@@ -82,6 +82,15 @@ public class WebElementUtils {
         return element;
     }
 
+    public static void switchToForm(){
+        System.out.println("inside switch");
+        driver.switchTo().frame(driver.findElement(By.id("form")));
+    }
+
+    public static void switchToDefaultContent(){
+        System.out.println("inside switch");
+        driver.switchTo().defaultContent();
+    }
 
     public void demo1(String arg1, String arg2) {
 

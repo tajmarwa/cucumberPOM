@@ -32,6 +32,7 @@ public class LoginPage {
     private WebElement authenticationErrorMessage;
 
     public void verifyUserIsOnLoginPage() {
+
         assertPresent(loginformPage);
     }
 

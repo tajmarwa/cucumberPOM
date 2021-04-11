@@ -1,3 +1,4 @@
+@qTest
 Feature: Order T-Shirt and Update User details
 
   Scenario Outline: Order T-Shirt
@@ -20,12 +21,16 @@ Feature: Order T-Shirt and Update User details
     And  Verify product details on Payment page
     When select "Pay by check" as payment method on Payment page
     Then Verify selected payment method on payment page
+    When User clicks on confirm my order button on payment page
+    Then Verify order details on order confirmation page
+    When User go to order history page from homepage
+    Then Verify placed order on Order History page
 
   Examples:
     | emailId                | password    |
     | singh.marwah@gmail.com | password123 |
 
-  @qTest
+
   Scenario Outline: Update First Name of the user in User details section
     Given User is on Homepage of the application
     When User navigates to login page
