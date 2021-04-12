@@ -4,18 +4,18 @@ cucumberPOM is a behavior driven development (BDD) approach to write automation 
 
 # Tools
 
-1) Java
+1) Java 11
 2) Maven
 3) BDD
 4) Cucumber
 5) PageObjectModel [POM]
+6) ChromeDriver - 89.0.4389.23
 
 # Writing a test
 
 The cucumber features goes in the features library and should have the ".feature" extension.
 
 # Running test
-
 
 1) Set the tags in the TestRunner file.
 For eg: tags = "@qTest"
