@@ -16,8 +16,11 @@ The cucumber features goes in the features library and should have the ".feature
 
 # Running test
 
-Go to your project directory from terminal and hit following commands
 
+1) Set the tags in the TestRunner file.
+For eg: tags = "@qTest"
+
+2) Go to your project directory from terminal and hit following commands
 mvn clean test
 
 # Run Report
