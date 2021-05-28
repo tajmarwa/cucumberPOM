@@ -8,6 +8,7 @@ public class ProductDetailsBean {
     String productDiscount;
     String productSize;
     String productColor;
+    String orderNumber;
 
     public String getProductName() {
         return productName;
@@ -63,6 +64,14 @@ public class ProductDetailsBean {
 
     public void setProductColor(String productColor) {
         this.productColor = productColor;
+    }
+
+    public String getOrderNumber() {
+        return orderNumber;
+    }
+
+    public void setOrderNumber(String orderNumber) {
+        this.orderNumber = orderNumber;
     }
 
 
