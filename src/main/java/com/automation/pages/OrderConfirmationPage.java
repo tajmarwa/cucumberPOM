@@ -15,12 +15,13 @@ import java.util.Locale;
 import java.util.TimeZone;
 
 import static com.automation.utils.AssertionUtils.assertEquals;
+import com.automation.data.ProductDetailsBean;
 import static com.automation.utils.AssertionUtils.assertPresent;
 import static com.automation.utils.DriverUtils.getDriver;
 import static com.automation.utils.WebElementUtils.waitForVisible;
 
 public class OrderConfirmationPage {
-    String actualOrderNumber = "";
+    ProductDetailsBean productDetailsBean = new ProductDetailsBean();
     public OrderConfirmationPage() {
         PageFactory.initElements(getDriver(), this);
     }
@@ -37,7 +38,8 @@ public class OrderConfirmationPage {
     public void getOrderReferenceNumber() {
         waitForVisible(orderRefNumber);
         assertPresent(orderRefNumber);
-        actualOrderNumber = orderRefNumber.getText();
+        productDetailsBean.setOrderNumber(orderRefNumber.getText());
+        //actualOrderNumber = orderRefNumber.getText();
     }
 
     public void verifyOrderPage() {
@@ -48,6 +50,7 @@ public class OrderConfirmationPage {
     public void verifyOrderPlaced() {
         waitForVisible(orderPlaced);
         assertPresent(orderPlaced);
+        String actualOrderNumber = productDetailsBean.getOrderNumber();
         String expectedOrderNumber = orderPlaced.getText();
         Assert.assertTrue(actualOrderNumber.contains(expectedOrderNumber));
     }
